@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,8 +12,6 @@ type SearchDialogProps = {
 };
 
 export function SearchDialog({ open, onClose }: SearchDialogProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (event: KeyboardEvent) => {
@@ -24,16 +22,6 @@ export function SearchDialog({ open, onClose }: SearchDialogProps) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
-
-  useEffect(() => {
-    if (searchQuery) {
-      console.log("Searching for:", searchQuery);
-    }
-  }, [searchQuery]);
-
-  if (!open) {
-    return null;
-  }
 
   return (
     <div
@@ -52,19 +40,12 @@ export function SearchDialog({ open, onClose }: SearchDialogProps) {
       >
         <div className="flex items-center justify-between">
           <p className="font-display text-xl">Search the Atelier</p>
-          <Button variant="ghost" size="icon" asChild>
-            <button type="button" aria-label="Close search" onClick={onClose}>
-              <X className="h-5 w-5" />
-            </button>
+          <Button variant="ghost" size="icon" aria-label="Close search" onClick={onClose}>
+            <X className="h-5 w-5" />
           </Button>
         </div>
         <div className="mt-6 space-y-4">
-          <Input
-            placeholder="Explore collections, silhouettes, or muses"
-            autoFocus
-            value={searchQuery}
-            onChange={(event) => setSearchQuery(event.target.value)}
-          />
+          <Input placeholder="Explore collections, silhouettes, or muses" autoFocus />
           <p className="text-sm text-charcoal/60">
             {/* TODO: connect to product and editorial search */}
             Begin typing to discover pieces crafted with intention.
