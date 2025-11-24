@@ -36,7 +36,7 @@ export function Hero({ image, headline, subtext, ctas }: HeroProps) {
   return (
     <section className="relative h-[70vh] min-h-[540px] overflow-hidden rounded-2xl bg-charcoal text-ivory">
       <Image
-        src={image ?? "/images/hero.jpg"}
+        src={image ?? "/hero.jpg"}
         alt="Lizza Atelier couture silhouette"
         fill
         priority
@@ -71,7 +71,7 @@ export function Hero({ image, headline, subtext, ctas }: HeroProps) {
             </Button>
           )}
           {tertiaryCta && (
-            <Button variant="ghost" asChild>
+            <Button variant="outline" asChild>
               <Link href={tertiaryCta.href}>{tertiaryCta.label}</Link>
             </Button>
           )}

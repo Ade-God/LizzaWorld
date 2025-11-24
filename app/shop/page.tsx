@@ -46,7 +46,7 @@ export default async function ShopPage() {
       </Section>
       <SizeGuide />
       <div className="grid gap-6">
-        {editorialImages.map((image, index) => (
+        {editorialImages.map((image: any, index: any) => (
           <div key={image} className="relative h-[360px] overflow-hidden rounded-2xl">
             <Image
               src={image}
