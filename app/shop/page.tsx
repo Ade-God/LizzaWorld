@@ -25,9 +25,9 @@ export default async function ShopPage() {
   }));
 
   const editorialImages = featuredCollection?.editorialImages?.map((image: unknown) => urlFor(image).url()) ?? [
-    "/images/gallery/img-7.jpg",
-    "/images/gallery/img-8.jpg",
-    "/images/gallery/img-9.jpg"
+    "/images/lizzaa/img-7.jpg",
+    "/images/lizzaa/img-8.jpg",
+    "/images/lizzaa/img-9.jpg"
   ];
 
   const collectionTitle = featuredCollection?.title ?? "Eminence Collection";
