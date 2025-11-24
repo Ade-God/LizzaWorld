@@ -14,7 +14,7 @@ const captions = [
 ];
 
 export function FeaturedGrid({ images }: FeaturedGridProps) {
-  const fallbackImages = captions.map((_, index) => `/images/gallery/img-${index + 1}.jpg`);
+  const fallbackImages = captions.map((_, index) => `/images/lizzaa/img-${index + 1}.jpg`);
   const visualSources = images?.length ? images.slice(0, captions.length) : fallbackImages;
 
   return (
