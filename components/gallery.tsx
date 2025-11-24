@@ -6,9 +6,16 @@ interface GalleryProps {
 
 export function Gallery({ images }: GalleryProps) {
   const fallbackImages = [
-    "/images/gallery/img-4.jpg",
-    "/images/gallery/img-5.jpg",
-    "/images/gallery/img-6.jpg"
+    "/images/lizzaa/img-4.jpg",
+    "/images/lizzaa/img-5.jpg",
+    "/images/lizzaa/img-6.jpg",
+    "/images/lizzaa/img-7.jpg",
+    "/images/lizzaa/img-8.jpg",
+    "/images/lizzaa/img-9.jpg",
+    "/images/lizzaa/img-10.jpg",
+    "/images/lizzaa/img-11.jpg",
+    "/images/lizzaa/img-12.jpg",
+    "/images/lizzaa/img-13.jpg"
   ];
 
   const galleryImages = images?.length ? images : fallbackImages;
