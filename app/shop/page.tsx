@@ -19,15 +19,15 @@ export default async function ShopPage() {
     description: product?.description,
     priceNaira: product?.priceNaira ?? 0,
     sizes: product?.sizes ?? [],
-    image: product?.images?.length ? urlFor(product.images[0]).url() : "/images/gallery/img-7.jpg",
+    image: product?.images?.length ? urlFor(product.images[0]).url() : "/images/lizzaa/img-7.png",
     orderLink: product?.orderLink,
     isAvailable: product?.isAvailable ?? true
   }));
 
   const editorialImages = featuredCollection?.editorialImages?.map((image: unknown) => urlFor(image).url()) ?? [
-    "/images/lizzaa/img-7.jpg",
-    "/images/lizzaa/img-8.jpg",
-    "/images/lizzaa/img-9.jpg"
+    "/images/lizzaa/img-7.png",
+    "/images/lizzaa/img-8.png",
+    "/images/lizzaa/img-9.png"
   ];
 
   const collectionTitle = featuredCollection?.title ?? "Eminence Collection";

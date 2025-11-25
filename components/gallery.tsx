@@ -6,16 +6,21 @@ interface GalleryProps {
 
 export function Gallery({ images }: GalleryProps) {
   const fallbackImages = [
-    "/images/lizzaa/img-4.jpg",
-    "/images/lizzaa/img-5.jpg",
-    "/images/lizzaa/img-6.jpg",
-    "/images/lizzaa/img-7.jpg",
-    "/images/lizzaa/img-8.jpg",
-    "/images/lizzaa/img-9.jpg",
-    "/images/lizzaa/img-10.jpg",
-    "/images/lizzaa/img-11.jpg",
-    "/images/lizzaa/img-12.jpg",
-    "/images/lizzaa/img-13.jpg"
+    "/images/lizzaa/img-14.png",
+    "/images/lizzaa/img-15.png",
+    "/images/lizzaa/img-16.png",
+    "/images/lizzaa/img-17.png",
+    "/images/lizzaa/img-18.png",
+    "/images/lizzaa/img-19.png",
+    "/images/lizzaa/img-20.png",
+    "/images/lizzaa/img-21.png",
+    "/images/lizzaa/img-22.png",
+    "/images/lizzaa/img-23.png",
+    "/images/lizzaa/img-24.png",
+    "/images/lizzaa/img-25.png",
+    "/images/lizzaa/img-26.png",
+    "/images/lizzaa/img-27.png",
+    "/images/lizzaa/img-28.png",
   ];
 
   const galleryImages = images?.length ? images : fallbackImages;
@@ -23,14 +28,17 @@ export function Gallery({ images }: GalleryProps) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {galleryImages.map((image, index) => (
-        <div key={image} className="relative h-[320px] overflow-hidden rounded-2xl">
+        <div key={image} className="relative h-[320px] overflow-hidden rounded-2xl bg-gray-100">
           <Image
             src={image}
             alt={`Lizza Atelier creation ${index + 1}`}
             fill
-            sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            quality={100}
+            priority={index < 6}
             unoptimized
             className="h-full w-full object-cover transition duration-700 hover:scale-105"
+            style={{ imageRendering: 'crisp-edges' }}
           />
         </div>
       ))}

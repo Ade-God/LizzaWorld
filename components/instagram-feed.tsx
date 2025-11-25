@@ -24,7 +24,7 @@ export function InstagramFeed({ handle }: InstagramFeedProps) {
             className="group relative aspect-square overflow-hidden rounded-2xl bg-charcoal/5"
           >
             <Image
-              src={`/images/lizzaa/img-${(index % 9) + 1}.jpg`}
+              src={`/images/lizzaa/img-${(index % 9) + 1}.png`}
               alt={`${handle} look ${index + 1}`}
               fill
               sizes="(min-width: 1024px) 10vw, (min-width: 768px) 15vw, 33vw"
