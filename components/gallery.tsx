@@ -6,16 +6,21 @@ interface GalleryProps {
 
 export function Gallery({ images }: GalleryProps) {
   const fallbackImages = [
-    "/images/lizzaa/img-4.png",
-    "/images/lizzaa/img-5.png",
-    "/images/lizzaa/img-6.png",
-    "/images/lizzaa/img-7.png",
-    "/images/lizzaa/img-8.png",
-    "/images/lizzaa/img-9.png",
-    "/images/lizzaa/img-10.png",
-    "/images/lizzaa/img-11.png",
-    "/images/lizzaa/img-12.png",
-    "/images/lizzaa/img-13.png"
+    "/images/lizzaa/img-14.png",
+    "/images/lizzaa/img-15.png",
+    "/images/lizzaa/img-16.png",
+    "/images/lizzaa/img-17.png",
+    "/images/lizzaa/img-18.png",
+    "/images/lizzaa/img-19.png",
+    "/images/lizzaa/img-20.png",
+    "/images/lizzaa/img-21.png",
+    "/images/lizzaa/img-22.png",
+    "/images/lizzaa/img-23.png",
+    "/images/lizzaa/img-24.png",
+    "/images/lizzaa/img-25.png",
+    "/images/lizzaa/img-26.png",
+    "/images/lizzaa/img-27.png",
+    "/images/lizzaa/img-28.png",
   ];
 
   const galleryImages = images?.length ? images : fallbackImages;
