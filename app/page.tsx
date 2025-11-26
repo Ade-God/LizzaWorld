@@ -14,7 +14,7 @@ export default async function HomePage() {
     sanityClient.fetch(siteSettingsQuery)
   ]);
 
-  const heroImage = homeData?.heroMedia ? urlFor(homeData.heroMedia).url() : undefined;
+  const heroVideo = homeData?.heroMedia ? urlFor(homeData.heroMedia).url() : undefined;
   const featuredVisuals = homeData?.featuredVisuals?.map((image: unknown) => urlFor(image).url());
   const testimonials = homeData?.testimonials?.map((testimonial: any) => ({
     quote: testimonial?.quote,
@@ -30,7 +30,7 @@ export default async function HomePage() {
   return (
     <div className="space-y-20">
       <Hero
-        image={heroImage}
+        video={heroVideo}
         headline={homeData?.heroHeadline}
         subtext={homeData?.heroSubtext}
         ctas={ctas}
