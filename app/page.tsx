@@ -14,7 +14,11 @@ export default async function HomePage() {
     sanityClient.fetch(siteSettingsQuery)
   ]);
 
-  const heroVideo = homeData?.heroMedia ? urlFor(homeData.heroMedia).url() : undefined;
+  // For video files, access the asset URL directly
+  const heroVideo = homeData?.heroMedia?.asset?.url || homeData?.heroMedia?.asset?._ref 
+    ? `https://cdn.sanity.io/files/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/${homeData.heroMedia.asset._ref.replace('file-', '').replace('-mp4', '.mp4').replace('-webm', '.webm').replace('-mov', '.mov')}`
+    : undefined;
+
   const featuredVisuals = homeData?.featuredVisuals?.map((image: unknown) => urlFor(image).url());
   const testimonials = homeData?.testimonials?.map((testimonial: any) => ({
     quote: testimonial?.quote,
